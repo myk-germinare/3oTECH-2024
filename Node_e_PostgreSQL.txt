@@ -1,0 +1,39 @@
+(Resultado da consulta ao Chat GPT)
+
+Para conectar o seu banco de dados PostgreSQL hospedado no Render usando JavaScript e Node.js, pode ser usada a biblioteca 'pg', que é o cliente PostgreSQL para Node.js. A forma de fazer isso é a seguinte:
+
+1. Primeiro, instale a biblioteca 'pg' usando o npm:
+
+npm install pg
+
+2. Depois de instalar a biblioteca 'pg', pode-se usar o código a seguir para conexão ao banco de dados:
+
+const { Client } = require('pg');
+
+// Parametros de conexao
+const connectionParams = {
+  user: 'dbecommerce_n9hn_user',
+  host: 'dpg-co7upesf7o1s738n3u5g-a.oregon-postgres.render.com',
+  database: 'dbecommerce_n9hn',
+  password: '0Scqh1LQR7sKG1EYNBaBmx4VPWirvJtF',
+  port: 5432, // Default PostgreSQL port
+};
+
+// Criacao uma nova instancia de cliente
+const client = new Client(connectionParams);
+
+// Conexao ao banco de dados
+client.connect()
+  .then(() => {
+    console.log('Conectado ao banco de dados!');
+    // Faca as operacoes aqui
+  })
+  .catch(err => {
+    console.error('Erro ao conectar ao banco de dados:', err);
+  });
+
+Este código criará uma nova instância de cliente PostgreSQL usando os parâmetros de conexão e tentará fazer uma conexão ao seu banco de dados PostgreSQL hospedado no Render. Se a conexão for bem-sucedida, a mensagem 'Conectado ao banco de dados!' será exibida no console.
+
+Você pode realizar quaisquer operações de bancos de dados (por exemplo, QUERY, SELECT, ADD, UPDATE) dentro do bloco '.then()' assim que a conexão tiver sido estabelecida.
+
+O tratamento adequado dos erros é feita usando o bloco '.catch()' caso ocorra algum problema na conexão ao banco de dados.
