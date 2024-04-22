@@ -9,3 +9,5 @@ Este repositório contém as especificações e códigos do trabalho em grupo pa
 (4) GerenciaBD_Python.ipynb -> Notebook com código Python para criar as tabelas do banco de dados e carregar dados iniciais, incluindo os produtos usados no protótipo da UI.
 
 (5) Node_e_PostgreSQL.txt -> código em Javascript para conexão ao banco de dados no PostgreSQL (não testado)
+
+(6) docker-compose.yaml -> arquivo para o Docker Compose que inicia um cluster Kafka com 3 brokers e Kafka-UI
