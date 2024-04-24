@@ -13,3 +13,6 @@ Este repositório contém as especificações e códigos do trabalho em grupo pa
 (6) Node_e_PostgreSQL.txt -> código em Javascript para conexão ao banco de dados no PostgreSQL (não testado).
 
 (7) docker-compose.yaml -> arquivo para o Docker Compose que inicia um cluster Kafka com 3 brokers e Kafka-UI.
+
+(8) requirements.txt -> requisitos adicionais para rodar o notebook GerenciaBD_Python.ipynb. Para rodá-lo, é só dar um "pip install -r requirements.txt"
+
