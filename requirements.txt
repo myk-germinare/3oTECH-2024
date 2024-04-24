@@ -1,0 +1,3 @@
+psycopg
+postgres
+"psycopg[binary,pool]"
